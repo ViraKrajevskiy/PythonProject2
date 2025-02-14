@@ -14,7 +14,6 @@ class Car(models.Model):
     ot_kuchi = models.IntegerField()
     narxi = models.DecimalField(max_digits=10, decimal_places=2)
     yili = models.IntegerField()
-    avtosalon = models.ForeignKey(Avtosalon, on_delete=models.CASCADE, related_name="cars")
 
     def __str__(self):
         return f"{self.model} ({self.yili})"
