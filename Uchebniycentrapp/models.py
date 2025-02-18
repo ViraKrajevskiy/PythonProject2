@@ -7,6 +7,7 @@ class Course(models.Model):
     description = models.TextField(verbose_name="Tavsif")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Yaratilgan sana")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Yangilangan sana")
+    photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
 
     class Meta:
         verbose_name = "Kurs"
