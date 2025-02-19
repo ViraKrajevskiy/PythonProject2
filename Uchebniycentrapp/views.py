@@ -8,7 +8,7 @@ def home(request):
 
 def cours(request):
     courses = Course.objects.all()
-    students = Student.objects.all()  # Добавляем студентов
+    students = Student.objects.all()
 
     context = {
         "courses": courses,
