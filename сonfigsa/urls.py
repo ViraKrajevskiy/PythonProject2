@@ -6,11 +6,13 @@ from django.conf.urls.static import static
 
 
 
-from Uchebniycentrapp.views import cours
+from Uchebniycentrapp.views import cours, category
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('usrin/',cours),
+    path('title_ap/<int:id>/',category),
+
 ]
 
 if settings.DEBUG:

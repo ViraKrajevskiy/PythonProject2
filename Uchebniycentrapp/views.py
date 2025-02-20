@@ -15,7 +15,21 @@ def cours(request):
         "students": students,
         "title": "Course and Students"
     }
+    return render(request, 'app.html', context)
+
+
+
+def category(request,id):
+    courses = Course.objects.filter(id=id)
+    students = Student.objects.all()
+
+    context = {
+        "courses": courses,
+        "students": students,
+        "title": "Course and Students"
+    }
     return render(request, 'index.html', context)
+
 
 
 
