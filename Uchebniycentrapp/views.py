@@ -22,7 +22,6 @@ def cours(request):
 def category(request,id):
     courses = Course.objects.filter(id=id)
     students = Student.objects.all()
-
     context = {
         "courses": courses,
         "students": students,
