@@ -45,24 +45,23 @@
   </div>
 </nav>
 
-{% for item in index %}
-<div class="card text-center mb-4">
-        <div class="card-header">
-          {{ item.title }}
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">{{ item.context }}</h5>
-          <p class="card-text">
-            Horse power: {{ item.horsepower }} ||| Car price: {{ item.price }}<br>
-            Car color: {{ item.color }} ||| Made year: {{ item.year }}
-          </p>
-          <img src="{{ item.photo.url }}" alt="" width="350">
-        </div>
-        <div class="card-footer text-muted">
-          {{ item.created_at }}
-        </div>
-      </div>
-{% endfor %}
+<div class="row">
+  <div class="col-6">
+    <img src="{{ caride.photo.url }}" class="card-img-top" alt="" width="200">
+  </div>
+  <div class="col-6">
+    <div class="card mb-3">
+    <div class="card-body">
+    <h5 class="card-title">{{caride.title}}</h5>
+    <p class="card-text">
+      Horse power: {{ caride.horsepower }} ||| Car price: {{ caride.price }}<br>
+            Car color: {{ caride.color }} ||| Made year: {{ caride.year }}   </p>
+    <p class="card-text"><small class="text-muted">{{caride.create_at}}</small></p>
+  </div>
+</div>
+  </div>
+</div>
+
 
 
 
