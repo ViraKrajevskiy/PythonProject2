@@ -13,7 +13,7 @@ def index(request):
     return render(request, 'super.html', context=context)
 
 def carmodel(request,model_id):
-    caride = Car.objects.filter(model_id=model_id)
+    caride = Car.objects.filter(model=model_id)
     carmodel = CarModel.objects.all()
 
     context = {
@@ -24,8 +24,10 @@ def carmodel(request,model_id):
 
 
 def new_bot(request,new_id):
-    new = Car.objects.get(pk=new_id)
+    caride = Car.objects.get(pk=new_id)
+    carmodel = CarModel.objects.all()
     context = {
-        "news": new
+        "caride": caride,
+        "carmodel":carmodel,
     }
     return render(request, 'about.html', context=context)

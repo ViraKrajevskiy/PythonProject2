@@ -63,9 +63,10 @@
             Horse power: {{ item.horsepower }} ||| Car price: {{ item.price }}<br>
             Car color: {{ item.color }} ||| Made year: {{ item.year }}
           </p>
-          {%for link in new_bot%}
-          <a href="{% url 'news' link.pk %}" class="btn btn-primary">Go somewhere</a>
-          {% endfor %}
+
+          <a href="{% url 'new_bot' item.pk %}" class="btn btn-primary">Go somewhere</a>
+
+
           <img src="{{ item.photo.url }}" alt="" width="350">
         </div>
         <div class="card-footer text-muted">
@@ -97,4 +98,3 @@
 
 </body>
 </html>
-

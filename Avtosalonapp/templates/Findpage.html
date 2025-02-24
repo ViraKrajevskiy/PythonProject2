@@ -63,7 +63,10 @@
             Horse power: {{ item.horsepower }} ||| Car price: {{ item.price }}<br>
             Car color: {{ item.color }} ||| Made year: {{ item.year }}
           </p>
-          <a href="" class="btn btn-primary">Go somewhere</a>
+
+          <a href="{% url 'new_bot' item.pk %}" class="btn btn-primary">Go somewhere</a>
+
+
           <img src="{{ item.photo.url }}" alt="" width="350">
         </div>
         <div class="card-footer text-muted">
@@ -76,9 +79,7 @@
 
     <div class="col-md-4">
       <div class="list-group">
-
-        <a href="" class="list-group-item list-group-item-action active">action</a>
-
+        <a href="#" class="list-group-item list-group-item-action active">Content</a>
         {% for item in carmodel %}
         <a href="{% url 'carmodel' item.pk %}">
           {{ item.title }}
@@ -97,4 +98,3 @@
 
 </body>
 </html>
-
